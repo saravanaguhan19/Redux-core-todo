@@ -1,6 +1,6 @@
 import { ADD_TODO, EDIT_TODO, REMOVE_TODO } from "../constants";
 
-function todoReducer(todo = [], action) {
+function todoReducer(todos = [], action) {
   if (action.type == ADD_TODO) {
     return [...todos, { id: action.payload.id, title: action.payload.title }];
   }
